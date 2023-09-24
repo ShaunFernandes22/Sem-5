@@ -76,7 +76,7 @@ def boothSigned(M, Q):
     if (A[0] == '1'): # negative answer
         print("A + Q = ", A+Q)
         bin_num = twosComplement(A+Q)
-        decimal_num = -int(num, 2)    
+        decimal_num = -int(bin_num, 2)    
         print("2's complement of A+Q : ")
     else:
         bin_num = (A+Q)
