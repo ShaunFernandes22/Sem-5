@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <title>Display JSON</title>
+            <style>
+                table, th, td {
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                }
+                th, td {
+                    padding: 5px;
+                }
+                input {
+                    margin-bottom: 5px;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>The data in JSON file is</h1>
+            <!-- <button onclick="loadJSON()">View the data</button> -->
+            <br>
+            <table id="data-disp"></table>
+            <script>
+                let table;
+                function loadJSON(data) {
+                    table="<tr><th>Sap</th><th>Name</th><th>Division</th>";
+                    // let data = await fetch("./data.json");
+                    // data = await data.json();
+
+                    console.log(data)                    
+                    
+                    data.forEach(element =>{
+                        table += "<tr><td>" + element['id'] + "</td><td>" + element['name'] + "</td><td>" + element['Div'] + "</td></tr>";
+                    })
+                    document.getElementById("data-disp").innerHTML = table;
+                }
+            </script>
+            <script src="data.js"></script>
+        </body>
+    </html>    
