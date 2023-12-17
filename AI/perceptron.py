@@ -17,7 +17,7 @@ class Perceptron:
         self.bias = np.random.rand(1)
     
     def activation(self, sum):
-        return 1 if sum > 5.5 else 0
+        return 1 if sum > 0 else 0
         
     def predict(self, input_arr):
         summation = np.dot(input_arr, self.weights) + self.bias
